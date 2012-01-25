@@ -34,6 +34,7 @@ wirk = g.add_nodes("Wirksamwerden §130")
 
 antrag = g.add_nodes("Antrag", "shape" => "record", "label" => "{
   Antrag: |
+  Bindung §145 |
   Annahmefrist §148}")
 antrag_erloescht = g.add_nodes( "Erlöschen §146" )
 antrag_neu = g.add_nodes( "neuer Antrag §150 Abs.1" )
@@ -48,6 +49,13 @@ dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   Dissens: |
   offener §154 |
   versteckter §154}")
+
+schuldverh = g.add_nodes("Schuldverhältnis", "shape" => "record", "label" => "{
+  Schuldverhältnis: |
+  Hauptleistungspflicht §241 Abs.1 |
+  Leistungsort §269 |
+  Zahlungsort §270 |
+  Gefahrenübergang §446f + §474 + §644}")
 
 kv = g.add_nodes( "Kaufvertrag" )
 wv = g.add_nodes( "Werkvertrag" )
@@ -77,10 +85,11 @@ g.add_edges( antrag, antrag_aender)
 g.add_edges( antrag_aender, antrag)
 g.add_edges( annahme, dissens)
 
-g.add_edges( annahme, kv , "style" => "bold")
-g.add_edges( annahme, wv , "style" => "bold")
-g.add_edges( annahme, dv , "style" => "bold")
-g.add_edges( annahme, mv , "style" => "bold")
+g.add_edges( annahme, schuldverh, "style" => "bold")
+g.add_edges( schuldverh, kv , "style" => "bold")
+g.add_edges( schuldverh, wv , "style" => "bold")
+g.add_edges( schuldverh, dv , "style" => "bold")
+g.add_edges( schuldverh, mv , "style" => "bold")
 
 # Generate output image
 g.output( :png => "schuldrecht.png" )
