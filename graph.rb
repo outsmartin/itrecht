@@ -52,12 +52,25 @@ dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   offener §154 |
   versteckter §154}")
 
-schuldverh = g.add_nodes("Schuldverhältnis", "shape" => "record", "label" => "{
-  Schuldverhältnis: |
+schuldverh = g.add_nodes("allg. Schuldverhältnis")
+schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
+  Schuldner: |
   Hauptleistungspflicht §241 Abs.1 |
   Leistungsort §269 |
   Zahlungsort §270 |
-  Gefahrenübergang §446f + §474 + §644}")
+  Gefahrenübergang §446f + §474 + §644 }")
+schuldner_verantw = g.add_nodes("Verantwortlichkeit", "shape" => "record", "label" => "{
+  Vertretenmüssen: |
+  Verantwortlichkeit §276 |
+  Sorgfalt §277 |
+  Verantw. für Dritte/Verrichtungsgeh.-Haft. §278 + §831}")
+
+glaeubiger = g.add_nodes("Gläubiger", "shape" => "record", "label" => "{
+  Gläubiger: |
+  Annahmeverzug §293 |
+  Wirkungen des Gläubigerverzugs §300}")
+
+spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 
 kv = g.add_nodes( "Kaufvertrag" )
 wv = g.add_nodes( "Werkvertrag" )
@@ -90,10 +103,14 @@ g.add_edges( antrag_neu, antrag)
 g.add_edges( annahme, dissens)
 
 g.add_edges( annahme, schuldverh, "style" => "bold")
-g.add_edges( schuldverh, kv , "style" => "bold")
-g.add_edges( schuldverh, wv , "style" => "bold")
-g.add_edges( schuldverh, dv , "style" => "bold")
-g.add_edges( schuldverh, mv , "style" => "bold")
+g.add_edges( annahme, spez_schuldverh, "style" => "bold")
+g.add_edges( schuldverh, glaeubiger , "style" => "bold")
+g.add_edges( schuldverh, schuldner , "style" => "bold")
+g.add_edges( schuldner, schuldner_verantw )
+g.add_edges( spez_schuldverh, kv , "style" => "bold")
+g.add_edges( spez_schuldverh, wv , "style" => "bold")
+g.add_edges( spez_schuldverh, dv , "style" => "bold")
+g.add_edges( spez_schuldverh, mv , "style" => "bold")
 
 # Generate output image
 g.output( :png => "schuldrecht.png" )
