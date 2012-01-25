@@ -21,6 +21,8 @@ wille = g.add_nodes("Willenserklärung", "shape" => "record", "label" => "{
   gesetzl. Verbot §134 |
   Sittenwidrigkeit §138 |
   Auslegung §133}")
+vertreter = g.add_nodes("Vertreter §164")
+nicht_vertreter = g.add_nodes("Vertreter ohne Vertretungvollmacht §177")
 anfecht = g.add_nodes("Anfechtung", "shape" => "record", "label" => "{
   Anfechtung: §142 Abs.1 |
   Irrtum §119 |
@@ -66,6 +68,8 @@ mv = g.add_nodes( "Mietvertrag" )
 g.add_edges( schuldrecht, vorraus , "style" => "bold")
 
 g.add_edges( vorraus, wille , "style" => "bold")
+g.add_edges( wille, vertreter )
+g.add_edges( vertreter, nicht_vertreter )
 g.add_edges( wille, anfecht )
 g.add_edges( anfecht, anfecht_ersatz )
 g.add_edges( anfecht, wille )
@@ -78,11 +82,11 @@ g.add_edges( wirk, anbahn , "style" => "bold")
 
 g.add_edges( anbahn, antrag , "style" => "bold")
 g.add_edges( antrag, annahme , "style" => "bold")
+g.add_edges( antrag, antrag_aender)
+g.add_edges( antrag_aender, antrag)
 g.add_edges( antrag, antrag_erloescht )
 g.add_edges( antrag_erloescht, antrag_neu)
 g.add_edges( antrag_neu, antrag)
-g.add_edges( antrag, antrag_aender)
-g.add_edges( antrag_aender, antrag)
 g.add_edges( annahme, dissens)
 
 g.add_edges( annahme, schuldverh, "style" => "bold")
