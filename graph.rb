@@ -142,6 +142,8 @@ wv_maengel = g.add_nodes( "Mängel_dv", "shape" => "record", "label" => "{
   Nacherfüllung §635 |
   Selbstvornahme §637 |
   Minderung §638}")
+wv_abnahme = g.add_nodes("Abnahme §640")
+wv_verguetung = g.add_nodes("Vergütung §641")
 
 dv = g.add_nodes( "Dienstvertrag" )
 dv_kuendigung = g.add_nodes( "Kündigung_dv", "shape" => "record", "label" => "{
@@ -212,6 +214,8 @@ g.add_edges( wv, wv_besteller)
 g.add_edges( wv, wv_unternehmer)
 g.add_edges( wv, wv_gefahr)
 g.add_edges( wv_besteller, wv_maengel)
+g.add_edges( wv_besteller, wv_abnahme)
+g.add_edges( wv_unternehmer, wv_verguetung)
 
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
 g.add_edges( dv, dv_kuendigung)
