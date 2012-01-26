@@ -56,14 +56,24 @@ schuldverh = g.add_nodes("allg. Schuldverhältnis")
 schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Schuldner: |
   Hauptleistungspflicht §241 Abs.1 |
+  Schutzpflicht §241 Abs.2 |
   Leistungsort §269 |
   Zahlungsort §270 |
   Gefahrenübergang §446f + §474 + §644 }")
+schuldner_pflichtverl = ("Pflichtverletzung")
 schuldner_verantw = g.add_nodes("Verantwortlichkeit", "shape" => "record", "label" => "{
   Vertretenmüssen: |
   Verantwortlichkeit §276 |
   Sorgfalt §277 |
   Verantw. für Dritte/Verrichtungsgeh.-Haft. §278 + §831}")
+schuldner_schadensers = g.add_nodes("Schadensersatz", "shape" => "record", "label" => "{
+  Schadensersatz: |
+  wegen Pflichtverletzung §280 Abs.1 |
+  statt der Leistung §281 |
+  Schutzpflichtverletzung §282 |
+  bei Ausschluss der Leistungspflicht §283 |
+  Ersatz vergeblicher Aufwendungen §284 |
+  bei Verzug §286 + §287 + §288}")
 
 glaeubiger = g.add_nodes("Gläubiger", "shape" => "record", "label" => "{
   Gläubiger: |
@@ -106,7 +116,10 @@ g.add_edges( annahme, schuldverh, "style" => "bold")
 g.add_edges( annahme, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
 g.add_edges( schuldverh, schuldner , "style" => "bold")
-g.add_edges( schuldner, schuldner_verantw )
+g.add_edges( schuldner, schuldner_pflichtverl )
+g.add_edges( schuldner_pflichtverl, schuldner_verantw )
+g.add_edges( schuldner_verantw, schuldner_schadensers )
+
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
