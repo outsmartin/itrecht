@@ -136,8 +136,17 @@ wv_gefahr = g.add_nodes("Gefahrenübergang §644")
 
 dv = g.add_nodes( "Dienstvertrag" )
 
-mv = g.add_nodes( "Mietvertrag" )
-mv_kuend = g.add_nodes("Kündigung §314")
+mv = g.add_nodes( "Mietvertrag" , "shape" => "record", "label" => "{
+  Mietvertrag: |
+  Hauptpflichten §535}")
+mv_maengel = g.add_nodes( "Mängel2" , "shape" => "record", "label" => "{
+  Mängel: |
+  Mietminderung §536 |
+  Schadens-/Aufwendungsanspruch §536a |
+  Kenntnis von Mängeln §536b}")
+mv_kuend = g.add_nodes("Kündigung", "shape" => "record", "label" => "{
+  Kündigung: §314 |
+  aussderordentlich §543}")
 
 # Create edges between the nodes
 g.add_edges( schuldrecht, vorraus , "style" => "bold")
@@ -192,6 +201,7 @@ g.add_edges( spez_schuldverh, dv , "style" => "bold")
 
 g.add_edges( spez_schuldverh, mv , "style" => "bold")
 g.add_edges( mv, mv_kuend )
+g.add_edges( mv, mv_maengel )
 
 # Generate output image
 g.output( :png => "schuldrecht.png" )
