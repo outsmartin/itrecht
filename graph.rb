@@ -132,14 +132,31 @@ kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
 kv_verkaeufer = g.add_nodes("Verkäufer")
 kv_regress = g.add_nodes("Regress §478")
 
-wv = g.add_nodes( "Werkvertrag" )
+wv = g.add_nodes( "Werkvertrag" , "shape" => "record", "label" => "{
+  Werkvertrag: |
+  Individualsoftware §651}")
+wv_besteller = g.add_nodes( "Besteller" )
+wv_unternehmer = g.add_nodes( "Unternehmer" )
 wv_gefahr = g.add_nodes("Gefahrenübergang §644")
+wv_maengel = g.add_nodes( "Mängel_dv", "shape" => "record", "label" => "{
+  Mängel: |
+  Rechte des Bestellers §634 |
+  Verjährung §634a |
+  Nacherfüllung §635 |
+  Selbstvornahme §637 |
+  Minderung §638}")
+wv_abnahme = g.add_nodes("Abnahme §640")
+wv_verguetung = g.add_nodes("Vergütung §641 + §271 + §320")
 
 dv = g.add_nodes( "Dienstvertrag" )
+dv_kuendigung = g.add_nodes( "Kündigung_dv", "shape" => "record", "label" => "{
+  Kündigung: |
+  Schriftform §632}")
 
 mv = g.add_nodes( "Mietvertrag" , "shape" => "record", "label" => "{
   Mietvertrag: |
   Hauptpflichten §535}")
+mv_mieter = g.add_nodes( "Mieter" )
 mv_maengel = g.add_nodes( "Mängel2" , "shape" => "record", "label" => "{
   Mängel: |
   Mietminderung §536 |
@@ -196,13 +213,20 @@ g.add_edges( kv, kv_gefahr)
 g.add_edges( kv_verkaeufer, kv_regress)
 
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
+g.add_edges( wv, wv_besteller)
+g.add_edges( wv, wv_unternehmer)
 g.add_edges( wv, wv_gefahr)
+g.add_edges( wv_besteller, wv_maengel)
+g.add_edges( wv_besteller, wv_abnahme)
+g.add_edges( wv_unternehmer, wv_verguetung)
 
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
+g.add_edges( dv, dv_kuendigung)
 
 g.add_edges( spez_schuldverh, mv , "style" => "bold")
+g.add_edges( mv, mv_mieter )
 g.add_edges( mv, mv_kuend )
-g.add_edges( mv, mv_maengel )
+g.add_edges( mv_mieter, mv_maengel )
 
 # Generate output image
 g.output( :png => "schuldrecht.png")
