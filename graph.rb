@@ -113,7 +113,9 @@ spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 kv = g.add_nodes( "Kaufvertrag", "shape" => "record", "label" => "{
   Kaufvertrag: |
   Pflichten §433 |
-  Sache §90}")
+  Sache §90
+  Verbrauchsgüter §474}")
+kv_kaeufer = g.add_nodes("Käufer")
 kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
   Mängel: |
   Sachmangel §434 |
@@ -124,8 +126,10 @@ kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
   keine Frist §440 |
   Minderung §441 |
   Kenntniss d. Käufers §442 |
-  Sache §90}")
+  Beweislastumkehr §476}")
 kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
+kv_verkaeufer = g.add_nodes("Verkäufer")
+kv_regress = g.add_nodes("Regress §478")
 
 wv = g.add_nodes( "Werkvertrag" )
 wv_gefahr = g.add_nodes("Gefahrenübergang §644")
@@ -175,8 +179,11 @@ g.add_edges( schuldner_pflichtverl, schuldner_verantw )
 g.add_edges( schuldner_verantw, schuldner_schadensers )
 
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
-g.add_edges( kv, kv_maengel)
+g.add_edges( kv, kv_kaeufer)
+g.add_edges( kv, kv_verkaeufer)
+g.add_edges( kv_kaeufer, kv_maengel)
 g.add_edges( kv, kv_gefahr)
+g.add_edges( kv_verkaeufer, kv_regress)
 
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
 g.add_edges( wv, wv_gefahr)
