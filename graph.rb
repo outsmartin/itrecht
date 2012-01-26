@@ -3,11 +3,13 @@ require "graphviz"
 
 #require 'graphviz'
 
-g = GraphViz.new( :G, :type => :digraph )
+g = GraphViz.new( :G, :type => :digraph , :layout => "dot")
 g.node["shape"] = "box"
+subg = GraphViz.new( :SUBG, :type => :digraph , :layout => "dot")
+subg.node["shape"] = "box"
 
 # Create nodes
-schuldrecht = g.add_nodes( "Schuldrecht" )
+schuldrecht = g.add_nodes( "Schuldrecht")
 
 vorraus = g.add_nodes("Vorraussetzungen", "shape" => "record", "label" => "{
   Vorraussetzungen:|
@@ -38,21 +40,27 @@ antrag = g.add_nodes("Antrag", "shape" => "record", "label" => "{
   Antrag: |
   Bindung §145 |
   Annahmefrist §148}")
-antrag_erloescht = g.add_nodes( "Erlöschen §146" )
-antrag_neu = g.add_nodes( "neuer Antrag §150 Abs.1" )
-antrag_aender= g.add_nodes( "abändernde Annahme §150 Abs.2" )
+antrag_erloescht = subg.add_nodes( "Erlöschen §146" )
+antrag_neu = subg.add_nodes( "neuer Antrag §150 Abs.1" )
+antrag_aender= subg.add_nodes( "abändernde Annahme §150 Abs.2" )
 annahme = g.add_nodes( "Vertragsannahme" , "shape" => "record", "label" => "{
   Vertragsannahme: |
   Anwesenheit §147 Abs.1 |
   Abwesenheit §147 Abs.2 |
   verspäteter Zugang §149 |
   gleichwertige Annahmehandlung §151}")
+agb = g.add_nodes( "AGB" , "shape" => "record", "label" => "{
+  AGB: |
+  Nutzung §305 +  §305a |
+  Unwirksamkeit §305b+c + §306 + §306a + §307 + §308 + §309 |
+  Anwendungsbereich §310}")
 dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   Dissens: |
   offener §154 |
   versteckter §154}")
 
-schuldverh = g.add_nodes("allg. Schuldverhältnis")
+schuldverh = g.add_nodes("allg. Schuldverhältnis", "shape" => "record", "label" => "{
+  Allg. Schuldverhältniss §311}")
 schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Schuldner: |
   Hauptleistungspflicht §241 Abs.1 |
@@ -79,13 +87,19 @@ glaeubiger = g.add_nodes("Gläubiger", "shape" => "record", "label" => "{
   Gläubiger: |
   Annahmeverzug §293 |
   Wirkungen des Gläubigerverzugs §300}")
+glaeubiger_rueck = g.add_nodes("Rücktritt", "shape" => "record", "label" => "{
+  Rücktritt: |
+  keine/falsche Leistung  §323 |
+  Pflichtverletzung §324}")
 
 spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 
 kv = g.add_nodes( "Kaufvertrag" )
 wv = g.add_nodes( "Werkvertrag" )
 dv = g.add_nodes( "Dienstvertrag" )
+
 mv = g.add_nodes( "Mietvertrag" )
+mv_kuend = g.add_nodes("Kündigung §314")
 
 # Create edges between the nodes
 g.add_edges( schuldrecht, vorraus , "style" => "bold")
@@ -111,10 +125,14 @@ g.add_edges( antrag, antrag_erloescht )
 g.add_edges( antrag_erloescht, antrag_neu)
 g.add_edges( antrag_neu, antrag)
 g.add_edges( annahme, dissens)
+g.add_edges( antrag, agb)
+g.add_edges( agb, antrag)
 
 g.add_edges( annahme, schuldverh, "style" => "bold")
 g.add_edges( annahme, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
+g.add_edges( glaeubiger, glaeubiger_rueck)
+g.add_edges( glaeubiger_rueck, schuldner_schadensers, "label" => "§325")
 g.add_edges( schuldverh, schuldner , "style" => "bold")
 g.add_edges( schuldner, schuldner_pflichtverl )
 g.add_edges( schuldner_pflichtverl, schuldner_verantw )
@@ -123,7 +141,9 @@ g.add_edges( schuldner_verantw, schuldner_schadensers )
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
+
 g.add_edges( spez_schuldverh, mv , "style" => "bold")
+g.add_edges( mv, mv_kuend )
 
 # Generate output image
 g.output( :png => "schuldrecht.png" )
