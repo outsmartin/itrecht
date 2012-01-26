@@ -48,7 +48,8 @@ annahme = g.add_nodes( "Vertragsannahme" , "shape" => "record", "label" => "{
   Anwesenheit §147 Abs.1 |
   Abwesenheit §147 Abs.2 |
   verspäteter Zugang §149 |
-  gleichwertige Annahmehandlung §151}")
+  gleichwertige Annahmehandlung §151 |
+  Versteigerung §156}")
 agb = g.add_nodes( "AGB" , "shape" => "record", "label" => "{
   AGB: |
   Nutzung §305 +  §305a |
@@ -90,7 +91,14 @@ glaeubiger = g.add_nodes("Gläubiger", "shape" => "record", "label" => "{
 glaeubiger_rueck = g.add_nodes("Rücktritt", "shape" => "record", "label" => "{
   Rücktritt: |
   keine/falsche Leistung  §323 |
-  Pflichtverletzung §324}")
+  Pflichtverletzung §324 |
+  Wirkungen §346 |
+  Erklärung §349}")
+glaeubiger_verbraucher = g.add_nodes("Verbraucher", "shape" => "record", "label" => "{
+  Verbraucher: |
+  Widerruf  §355 |
+  Rückgabe §356 |
+  Rechtsfolgen Widerr./Rückg. §357}")
 
 spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 
@@ -132,6 +140,7 @@ g.add_edges( annahme, schuldverh, "style" => "bold")
 g.add_edges( annahme, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
 g.add_edges( glaeubiger, glaeubiger_rueck)
+g.add_edges( glaeubiger, glaeubiger_verbraucher)
 g.add_edges( glaeubiger_rueck, schuldner_schadensers, "label" => "§325")
 g.add_edges( schuldverh, schuldner , "style" => "bold")
 g.add_edges( schuldner, schuldner_pflichtverl )
