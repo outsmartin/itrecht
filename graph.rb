@@ -4,9 +4,9 @@ require "graphviz"
 
 #require 'graphviz'
 
-g = GraphViz.new( :G, :type => :digraph , :layout => "dot")
+g = GraphViz.new( :G, :type => :digraph)
 g.node["shape"] = "box"
-subg = GraphViz.new( :SUBG, :type => :digraph , :layout => "dot")
+subg = GraphViz.new( :SUBG, :type => :digraph )
 subg.node["shape"] = "box"
 
 # Create nodes
@@ -17,12 +17,9 @@ vorraus = g.add_nodes("Vorraussetzungen", "shape" => "record", "label" => "{
   Geschäftsfähigkeit §104}")
 wille = g.add_nodes("Willenserklärung", "shape" => "record", "label" => "{
   Willenserklärung: |
-  geheimer Vorbehalt §116 |
-  Scheingeschäft §117 |
-  Scherzerklärung §118 |
-  Formmangel §125ff |
-  gesetzl. Verbot §134 |
-  Sittenwidrigkeit §138 |
+  geheimer Vorbehalt §116 | Scheingeschäft §117 |
+  Scherzerklärung §118 | Formmangel §125ff |
+  gesetzl. Verbot §134 | Sittenwidrigkeit §138 |
   Auslegung §133}")
 vertreter = g.add_nodes("Vertreter §164")
 nicht_vertreter = g.add_nodes("Vertreter ohne Vertretungvollmacht §177")
@@ -230,3 +227,5 @@ g.add_edges( mv_mieter, mv_maengel )
 
 # Generate output image
 g.output( :png => "schuldrecht.png")
+g.output( :dot => "schuldrecht.dot")
+
