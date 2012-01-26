@@ -131,7 +131,9 @@ kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
 kv_verkaeufer = g.add_nodes("Verkäufer")
 kv_regress = g.add_nodes("Regress §478")
 
-wv = g.add_nodes( "Werkvertrag" )
+wv = g.add_nodes( "Werkvertrag" , "shape" => "record", "label" => "{
+  Werkvertrag: |
+  Individualsoftware §651}")
 wv_besteller = g.add_nodes( "Besteller" )
 wv_unternehmer = g.add_nodes( "Unternehmer" )
 wv_gefahr = g.add_nodes("Gefahrenübergang §644")
@@ -143,7 +145,7 @@ wv_maengel = g.add_nodes( "Mängel_dv", "shape" => "record", "label" => "{
   Selbstvornahme §637 |
   Minderung §638}")
 wv_abnahme = g.add_nodes("Abnahme §640")
-wv_verguetung = g.add_nodes("Vergütung §641")
+wv_verguetung = g.add_nodes("Vergütung §641 + §271 + §320")
 
 dv = g.add_nodes( "Dienstvertrag" )
 dv_kuendigung = g.add_nodes( "Kündigung_dv", "shape" => "record", "label" => "{
