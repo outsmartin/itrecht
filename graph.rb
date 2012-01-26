@@ -49,7 +49,8 @@ annahme = g.add_nodes( "Vertragsannahme" , "shape" => "record", "label" => "{
   Anwesenheit §147 Abs.1 |
   Abwesenheit §147 Abs.2 |
   verspäteter Zugang §149 |
-  gleichwertige Annahmehandlung §151}")
+  gleichwertige Annahmehandlung §151 |
+  Versteigerung §156}")
 agb = g.add_nodes( "AGB" , "shape" => "record", "label" => "{
   AGB: |
   Nutzung §305 +  §305a |
@@ -60,15 +61,23 @@ dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   offener §154 |
   versteckter §154}")
 
+vertrag = g.add_nodes( "Vertrag" )
 schuldverh = g.add_nodes("allg. Schuldverhältnis", "shape" => "record", "label" => "{
   Allg. Schuldverhältniss §311}")
+
+erfuellung = g.add_nodes("Erfüllung", "shape" => "record", "label" => "{
+  Erfüllung: |
+  durch Leistung §362 + §364 |
+  Hinterlegung §372ff |
+  Aufrechnung §387ff |
+  Erlass §397}")
+
 schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Schuldner: |
   Hauptleistungspflicht §241 Abs.1 |
   Schutzpflicht §241 Abs.2 |
   Leistungsort §269 |
-  Zahlungsort §270 |
-  Gefahrenübergang §446f + §474 + §644 }")
+  Zahlungsort §270}")
 schuldner_pflichtverl = ("Pflichtverletzung")
 schuldner_verantw = g.add_nodes("Verantwortlichkeit", "shape" => "record", "label" => "{
   Vertretenmüssen: |
@@ -91,16 +100,54 @@ glaeubiger = g.add_nodes("Gläubiger", "shape" => "record", "label" => "{
 glaeubiger_rueck = g.add_nodes("Rücktritt", "shape" => "record", "label" => "{
   Rücktritt: |
   keine/falsche Leistung  §323 |
-  Pflichtverletzung §324}")
+  Pflichtverletzung §324 |
+  Wirkungen §346 |
+  Erklärung §349}")
+glaeubiger_verbraucher = g.add_nodes("Verbraucher", "shape" => "record", "label" => "{
+  Verbraucher: |
+  Widerruf  §355 |
+  Rückgabe §356 |
+  Rechtsfolgen Widerr./Rückg. §357}")
 
 spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 
-kv = g.add_nodes( "Kaufvertrag" )
+kv = g.add_nodes( "Kaufvertrag", "shape" => "record", "label" => "{
+  Kaufvertrag: |
+  Pflichten §433 |
+  Sache §90
+  Verbrauchsgüter §474}")
+kv_kaeufer = g.add_nodes("Käufer")
+kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
+  Mängel: |
+  Sachmangel §434 |
+  Rechtsmangel §435 |
+  Rechte des Käufers bei Mängeln §437 |
+  Verjährung §438 |
+  Nacherfüllung §439 |
+  keine Frist §440 |
+  Minderung §441 |
+  Kenntniss d. Käufers §442 |
+  Beweislastumkehr §476}")
+kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
+kv_verkaeufer = g.add_nodes("Verkäufer")
+kv_regress = g.add_nodes("Regress §478")
+
 wv = g.add_nodes( "Werkvertrag" )
+wv_gefahr = g.add_nodes("Gefahrenübergang §644")
+
 dv = g.add_nodes( "Dienstvertrag" )
 
-mv = g.add_nodes( "Mietvertrag" )
-mv_kuend = g.add_nodes("Kündigung §314")
+mv = g.add_nodes( "Mietvertrag" , "shape" => "record", "label" => "{
+  Mietvertrag: |
+  Hauptpflichten §535}")
+mv_maengel = g.add_nodes( "Mängel2" , "shape" => "record", "label" => "{
+  Mängel: |
+  Mietminderung §536 |
+  Schadens-/Aufwendungsanspruch §536a |
+  Kenntnis von Mängeln §536b}")
+mv_kuend = g.add_nodes("Kündigung", "shape" => "record", "label" => "{
+  Kündigung: §314 |
+  aussderordentlich §543}")
 
 # Create edges between the nodes
 g.add_edges( schuldrecht, vorraus , "style" => "bold")
@@ -110,7 +157,6 @@ g.add_edges( wille, vertreter )
 g.add_edges( vertreter, nicht_vertreter )
 g.add_edges( wille, anfecht )
 g.add_edges( anfecht, anfecht_ersatz )
-g.add_edges( anfecht, wille )
 g.add_edges( anbahn, anbahn_pflicht)
 g.add_edges( anbahn_pflicht, anbahn_schaden)
 g.add_edges( wille, intent, "style" => "dashed")
@@ -128,11 +174,14 @@ g.add_edges( antrag_neu, antrag)
 g.add_edges( annahme, dissens)
 g.add_edges( antrag, agb)
 g.add_edges( agb, antrag)
+g.add_edges( annahme, vertrag, "style" => "bold")
 
-g.add_edges( annahme, schuldverh, "style" => "bold")
-g.add_edges( annahme, spez_schuldverh, "style" => "bold")
+g.add_edges( vertrag, schuldverh, "style" => "bold")
+g.add_edges( vertrag, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
+g.add_edges( schuldverh, erfuellung , "style" => "bold")
 g.add_edges( glaeubiger, glaeubiger_rueck)
+g.add_edges( glaeubiger, glaeubiger_verbraucher)
 g.add_edges( glaeubiger_rueck, schuldner_schadensers, "label" => "§325")
 g.add_edges( schuldverh, schuldner , "style" => "bold")
 g.add_edges( schuldner, schuldner_pflichtverl )
@@ -140,11 +189,20 @@ g.add_edges( schuldner_pflichtverl, schuldner_verantw )
 g.add_edges( schuldner_verantw, schuldner_schadensers )
 
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
+g.add_edges( kv, kv_kaeufer)
+g.add_edges( kv, kv_verkaeufer)
+g.add_edges( kv_kaeufer, kv_maengel)
+g.add_edges( kv, kv_gefahr)
+g.add_edges( kv_verkaeufer, kv_regress)
+
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
+g.add_edges( wv, wv_gefahr)
+
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
 
 g.add_edges( spez_schuldverh, mv , "style" => "bold")
 g.add_edges( mv, mv_kuend )
+g.add_edges( mv, mv_maengel )
 
 # Generate output image
 g.output( :png => "schuldrecht.png")
