@@ -60,6 +60,7 @@ dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   offener §154 |
   versteckter §154}")
 
+vertrag = g.add_nodes( "Vertrag" )
 schuldverh = g.add_nodes("allg. Schuldverhältnis", "shape" => "record", "label" => "{
   Allg. Schuldverhältniss §311}")
 
@@ -75,8 +76,7 @@ schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Hauptleistungspflicht §241 Abs.1 |
   Schutzpflicht §241 Abs.2 |
   Leistungsort §269 |
-  Zahlungsort §270 |
-  Gefahrenübergang §446f + §474 + §644 }")
+  Zahlungsort §270}")
 schuldner_pflichtverl = ("Pflichtverletzung")
 schuldner_verantw = g.add_nodes("Verantwortlichkeit", "shape" => "record", "label" => "{
   Vertretenmüssen: |
@@ -114,7 +114,6 @@ kv = g.add_nodes( "Kaufvertrag", "shape" => "record", "label" => "{
   Kaufvertrag: |
   Pflichten §433 |
   Sache §90}")
-
 kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
   Mängel: |
   Sachmangel §434 |
@@ -126,8 +125,11 @@ kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
   Minderung §441 |
   Kenntniss d. Käufers §442 |
   Sache §90}")
+kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
 
 wv = g.add_nodes( "Werkvertrag" )
+wv_gefahr = g.add_nodes("Gefahrenübergang §644")
+
 dv = g.add_nodes( "Dienstvertrag" )
 
 mv = g.add_nodes( "Mietvertrag" )
@@ -158,9 +160,10 @@ g.add_edges( antrag_neu, antrag)
 g.add_edges( annahme, dissens)
 g.add_edges( antrag, agb)
 g.add_edges( agb, antrag)
+g.add_edges( annahme, vertrag, "style" => "bold")
 
-g.add_edges( annahme, schuldverh, "style" => "bold")
-g.add_edges( annahme, spez_schuldverh, "style" => "bold")
+g.add_edges( vertrag, schuldverh, "style" => "bold")
+g.add_edges( vertrag, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
 g.add_edges( schuldverh, erfuellung , "style" => "bold")
 g.add_edges( glaeubiger, glaeubiger_rueck)
@@ -173,8 +176,11 @@ g.add_edges( schuldner_verantw, schuldner_schadensers )
 
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
 g.add_edges( kv, kv_maengel)
+g.add_edges( kv, kv_gefahr)
 
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
+g.add_edges( wv, wv_gefahr)
+
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
 
 g.add_edges( spez_schuldverh, mv , "style" => "bold")
