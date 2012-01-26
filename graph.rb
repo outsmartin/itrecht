@@ -110,7 +110,23 @@ glaeubiger_verbraucher = g.add_nodes("Verbraucher", "shape" => "record", "label"
 
 spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 
-kv = g.add_nodes( "Kaufvertrag" )
+kv = g.add_nodes( "Kaufvertrag", "shape" => "record", "label" => "{
+  Kaufvertrag: |
+  Pflichten §433 |
+  Sache §90}")
+
+kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
+  Mängel: |
+  Sachmangel §434 |
+  Rechtsmangel §435 |
+  Rechte des Käufers bei Mängeln §437 |
+  Verjährung §438 |
+  Nacherfüllung §439 |
+  keine Frist §440 |
+  Minderung §441 |
+  Kenntniss d. Käufers §442 |
+  Sache §90}")
+
 wv = g.add_nodes( "Werkvertrag" )
 dv = g.add_nodes( "Dienstvertrag" )
 
@@ -156,6 +172,8 @@ g.add_edges( schuldner_pflichtverl, schuldner_verantw )
 g.add_edges( schuldner_verantw, schuldner_schadensers )
 
 g.add_edges( spez_schuldverh, kv , "style" => "bold")
+g.add_edges( kv, kv_maengel)
+
 g.add_edges( spez_schuldverh, wv , "style" => "bold")
 g.add_edges( spez_schuldverh, dv , "style" => "bold")
 
