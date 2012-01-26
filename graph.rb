@@ -62,6 +62,14 @@ dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
 
 schuldverh = g.add_nodes("allg. Schuldverhältnis", "shape" => "record", "label" => "{
   Allg. Schuldverhältniss §311}")
+
+erfuellung = g.add_nodes("Erfüllung", "shape" => "record", "label" => "{
+  Erfüllung: |
+  durch Leistung §362 + §364 |
+  Hinterlegung §372ff |
+  Aufrechnung §387ff |
+  Erlass §397}")
+
 schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Schuldner: |
   Hauptleistungspflicht §241 Abs.1 |
@@ -117,7 +125,6 @@ g.add_edges( wille, vertreter )
 g.add_edges( vertreter, nicht_vertreter )
 g.add_edges( wille, anfecht )
 g.add_edges( anfecht, anfecht_ersatz )
-g.add_edges( anfecht, wille )
 g.add_edges( anbahn, anbahn_pflicht)
 g.add_edges( anbahn_pflicht, anbahn_schaden)
 g.add_edges( wille, intent, "style" => "dashed")
@@ -139,6 +146,7 @@ g.add_edges( agb, antrag)
 g.add_edges( annahme, schuldverh, "style" => "bold")
 g.add_edges( annahme, spez_schuldverh, "style" => "bold")
 g.add_edges( schuldverh, glaeubiger , "style" => "bold")
+g.add_edges( schuldverh, erfuellung , "style" => "bold")
 g.add_edges( glaeubiger, glaeubiger_rueck)
 g.add_edges( glaeubiger, glaeubiger_verbraucher)
 g.add_edges( glaeubiger_rueck, schuldner_schadensers, "label" => "§325")
