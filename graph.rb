@@ -1,3 +1,4 @@
+#encoding: UTF-8
 require "rubygems"
 require "graphviz"
 
@@ -146,4 +147,4 @@ g.add_edges( spez_schuldverh, mv , "style" => "bold")
 g.add_edges( mv, mv_kuend )
 
 # Generate output image
-g.output( :png => "schuldrecht.png" )
+g.output( :png => "schuldrecht.png")
