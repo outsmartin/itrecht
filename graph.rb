@@ -50,8 +50,13 @@ annahme = g.add_nodes( "Vertragsannahme" , "shape" => "record", "label" => "{
   Versteigerung §156}")
 agb = g.add_nodes( "AGB" , "shape" => "record", "label" => "{
   AGB: |
-  Nutzung §305 +  §305a |
-  Unwirksamkeit §305b+c + §306 + §306a + §307 + §308 + §309 |
+  Nutzung §305 Abs1 + §305a |
+  Hinweis §305 Abs2 Nr1 |
+  Kenntnisnahme §305 Abs2 Nr2 |
+  vor Vertragsschluss §305 Abs3 |
+  Unwirksamkeit §305b+c + §306 + §306a |
+  Benachteiligung §307 |
+  Klauselverbote §308 + §309 |
   Anwendungsbereich §310}")
 dissens= g.add_nodes( "Dissens" , "shape" => "record", "label" => "{
   Dissens: |
@@ -111,7 +116,7 @@ spez_schuldverh = g.add_nodes("spez. Schuldverhältnis")
 kv = g.add_nodes( "Kaufvertrag", "shape" => "record", "label" => "{
   Kaufvertrag: |
   Pflichten §433 |
-  Sache §90
+  Sache §90 |
   Verbrauchsgüter §474}")
 kv_kaeufer = g.add_nodes("Käufer")
 kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
@@ -125,7 +130,10 @@ kv_maengel = g.add_nodes( "Mängel", "shape" => "record", "label" => "{
   Minderung §441 |
   Kenntniss d. Käufers §442 |
   Beweislastumkehr §476}")
-kv_gefahr = g.add_nodes("Gefahrenübergang §446f + §474")
+kv_gefahr = g.add_nodes("Gefahrenübergang" , "shape" => "record", "label" => "{
+  Gefahrenübergang: |
+  allg. §446 |
+  Versendungskauf §447}")
 kv_verkaeufer = g.add_nodes("Verkäufer")
 kv_regress = g.add_nodes("Regress §478")
 
