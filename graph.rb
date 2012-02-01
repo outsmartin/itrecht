@@ -150,7 +150,9 @@ wv_maengel = g.add_nodes( "Mängel_dv", "shape" => "record", "label" => "{
   Nacherfüllung §635 |
   Selbstvornahme §637 |
   Minderung §638}")
-wv_abnahme = g.add_nodes("Abnahme §640")
+wv_abnahme = g.add_nodes("Abnahme_wv", "shape" => "record", "label" => "{
+  Abnahme §640 |
+  Kündigungsrecht §649}")
 wv_verguetung = g.add_nodes("Vergütung §641 + §271 + §320")
 
 dv = g.add_nodes( "Dienstvertrag" )

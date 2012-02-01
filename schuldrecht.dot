@@ -1,121 +1,121 @@
 digraph G {
 	node [label="\N", shape=box];
-	graph [bb="0,0,2053,3022"];
-	Schuldrecht [label=Schuldrecht, pos="1156,3004", width="1.3611", height="0.5"];
-	Vorraussetzungen [label="{\n  Vorraussetzungen:|\n  Geschäftsfähigkeit §104}", shape=record, pos="1156,2905", rects="1062.5,2905,1249.5,2947 1062.5,2863,1249.5,2905", width="2.5833", height="1.1806"];
+	graph [bb="0,0,2127,3022"];
+	Schuldrecht [label=Schuldrecht, pos="1168,3004", width="1.3611", height="0.5"];
+	Vorraussetzungen [label="{\n  Vorraussetzungen:|\n  Geschäftsfähigkeit §104}", shape=record, pos="1168,2905", rects="1074.5,2905,1261.5,2947 1074.5,2863,1261.5,2905", width="2.5833", height="1.1806"];
 	Willenserklärung [label="{\n  Willenserklärung: |\n  geheimer Vorbehalt §116 | Scheingeschäft §117 |\n  Scherzerklärung §118 | Formmangel §125ff |\
-\n  gesetzl. Verbot §134 | Sittenwidrigkeit §138 |\n  Auslegung §133}", shape=record, pos="1156,2679", rects="1058,2781,1254,2823 1058,2739,1254,2781 1058,2713,1254,2739 1058,2671,1254,2713 1058,2645,1254,2671 1058,2603,1254,2645 1058,2577\
-,1254,2603 1058,2535,1254,2577", width="2.7222", height="4.0139"];
-	"Vertreter §164" [label="Vertreter §164", pos="735,2432", width="1.6389", height="0.5"];
-	"Vertreter ohne Vertretungvollmacht §177" [label="Vertreter ohne Vertretungvollmacht §177", pos="697,2312", width="4.2222", height="0.5"];
-	Anfechtung [label="{\n  Anfechtung: §142 Abs.1 |\n  Irrtum §119 |\n  Übermittlungsfehler §120}", shape=record, pos="930,2432", rects="831,2453,1029,2495 831,2411,1029,2453 831,2369,1029,2411", width="2.75", height="1.7639"];
-	"Schadensersatz §122" [label="Schadensersatz §122", pos="949,2312", width="2.2778", height="0.5"];
-	"Letter of Intent §133 + §157" [label="Letter of Intent §133 + §157", pos="1156,2432", width="3.0278", height="0.5"];
-	"Vertragsanbahnung §311 Abs\.2" [label="Vertragsanbahnung §311 Abs.2", pos="1367,2312", width="3.25", height="0.5"];
-	"Pflichten §241 Abs\.2" [label="Pflichten §241 Abs.2", pos="1127,2192", width="2.1944", height="0.5"];
-	"Schadensersatz §280 Abs\.1 Satz 1" [label="Schadensersatz §280 Abs.1 Satz 1", pos="783,1900", width="3.5556", height="0.5"];
-	"Wirksamwerden §130" [label="Wirksamwerden §130", pos="1367,2432", width="2.3333", height="0.5"];
-	Antrag [label="{\n  Antrag: |\n  Bindung §145 |\n  Annahmefrist §148}", shape=record, pos="1517,2192", rects="1440.5,2213,1593.5,2255 1440.5,2171,1593.5,2213 1440.5,2129,1593.5,2171", width="2.1111", height="1.7639"];
+\n  gesetzl. Verbot §134 | Sittenwidrigkeit §138 |\n  Auslegung §133}", shape=record, pos="1168,2679", rects="1070,2781,1266,2823 1070,2739,1266,2781 1070,2713,1266,2739 1070,2671,1266,2713 1070,2645,1266,2671 1070,2603,1266,2645 1070,2577\
+,1266,2603 1070,2535,1266,2577", width="2.7222", height="4.0139"];
+	"Vertreter §164" [label="Vertreter §164", pos="747,2432", width="1.6389", height="0.5"];
+	"Vertreter ohne Vertretungvollmacht §177" [label="Vertreter ohne Vertretungvollmacht §177", pos="709,2312", width="4.2222", height="0.5"];
+	Anfechtung [label="{\n  Anfechtung: §142 Abs.1 |\n  Irrtum §119 |\n  Übermittlungsfehler §120}", shape=record, pos="942,2432", rects="843,2453,1041,2495 843,2411,1041,2453 843,2369,1041,2411", width="2.75", height="1.7639"];
+	"Schadensersatz §122" [label="Schadensersatz §122", pos="961,2312", width="2.2778", height="0.5"];
+	"Letter of Intent §133 + §157" [label="Letter of Intent §133 + §157", pos="1168,2432", width="3.0278", height="0.5"];
+	"Vertragsanbahnung §311 Abs\.2" [label="Vertragsanbahnung §311 Abs.2", pos="1379,2312", width="3.25", height="0.5"];
+	"Pflichten §241 Abs\.2" [label="Pflichten §241 Abs.2", pos="1139,2192", width="2.1944", height="0.5"];
+	"Schadensersatz §280 Abs\.1 Satz 1" [label="Schadensersatz §280 Abs.1 Satz 1", pos="795,1900", width="3.5556", height="0.5"];
+	"Wirksamwerden §130" [label="Wirksamwerden §130", pos="1379,2432", width="2.3333", height="0.5"];
+	Antrag [label="{\n  Antrag: |\n  Bindung §145 |\n  Annahmefrist §148}", shape=record, pos="1529,2192", rects="1452.5,2213,1605.5,2255 1452.5,2171,1605.5,2213 1452.5,2129,1605.5,2171", width="2.1111", height="1.7639"];
 	Vertragsannahme [label="{\n  Vertragsannahme: |\n  Anwesenheit §147 Abs.1 |\n  Abwesenheit §147 Abs.2 |\n  verspäteter Zugang §149 |\n  gleichwertige\
- Annahmehandlung §151 |\n  Versteigerung §156}", shape=record, pos="1073,1900", rects="929,1984,1217,2026 929,1942,1217,1984 929,1900,1217,1942 929,1858,1217,1900 929,1816,1217,1858 929,1774,1217,1816", width=4, height="3.5139"];
+ Annahmehandlung §151 |\n  Versteigerung §156}", shape=record, pos="1085,1900", rects="941,1984,1229,2026 941,1942,1229,1984 941,1900,1229,1942 941,1858,1229,1900 941,1816,1229,1858 941,1774,1229,1816", width=4, height="3.5139"];
 	AGB [label="{\n  AGB: |\n  Nutzung §305 Abs1 + §305a |\n  Hinweis §305 Abs2 Nr1 |\n  Kenntnisnahme §305 Abs2 Nr2 |\n  vor Vertragsschluss\
  §305 Abs3 |\n  Unwirksamkeit §305b+c + §306 + §306a |\n  Benachteiligung §307 |\n  Klauselverbote §308 + §309 |\n  Anwendungsbereich\
- §310}", shape=record, pos="1390,1900", rects="1235,2047,1545,2089 1235,2005,1545,2047 1235,1963,1545,2005 1235,1921,1545,1963 1235,1879,1545,1921 1235,1837,1545,1879 1235,1795\
-,1545,1837 1235,1753,1545,1795 1235,1711,1545,1753", width="4.3056", height="5.2639"];
-	Dissens [label="{\n  Dissens: |\n  offener §154 |\n  versteckter §154}", shape=record, pos="1061,1608", rects="991.5,1629,1130.5,1671 991.5,1587,1130.5,1629 991.5,1545,1130.5,1587", width="1.9167", height="1.7639"];
-	Vertrag [label=Vertrag, pos="1182,1608", width="0.94444", height="0.5"];
+ §310}", shape=record, pos="1402,1900", rects="1247,2047,1557,2089 1247,2005,1557,2047 1247,1963,1557,2005 1247,1921,1557,1963 1247,1879,1557,1921 1247,1837,1557,1879 1247,1795\
+,1557,1837 1247,1753,1557,1795 1247,1711,1557,1753", width="4.3056", height="5.2639"];
+	Dissens [label="{\n  Dissens: |\n  offener §154 |\n  versteckter §154}", shape=record, pos="1073,1608", rects="1003.5,1629,1142.5,1671 1003.5,1587,1142.5,1629 1003.5,1545,1142.5,1587", width="1.9167", height="1.7639"];
+	Vertrag [label=Vertrag, pos="1194,1608", width="0.94444", height="0.5"];
 	"allg\. Schuldverhältnis" [label="{\n  Allg. Schuldverhältniss §311}", shape=record, pos="470,1484", rects="362,1463,578,1505", width=3, height="0.59722"];
 	Erfüllung [label="{\n  Erfüllung: |\n  durch Leistung §362 + §364 |\n  Hinterlegung §372ff |\n  Aufrechnung §387ff |\n  Erlass §397}", shape=record, pos="109,1318", rects="0,1381,218,1423 0,1339,218,1381 0,1297,218,1339 0,1255,218,1297 0,1213,218,1255", width="3.0278", height="2.9306"];
 	Schuldner [label="{\n  Schuldner: |\n  Hauptleistungspflicht §241 Abs.1 |\n  Schutzpflicht §241 Abs.2 |\n  Leistungsort §269 |\n  Zahlungsort �\
 �270}", shape=record, pos="360,1318", rects="235.5,1381,484.5,1423 235.5,1339,484.5,1381 235.5,1297,484.5,1339 235.5,1255,484.5,1297 235.5,1213,484.5,1255", width="3.4444", height="2.9306"];
 	Verantwortlichkeit [label="{\n  Vertretenmüssen: |\n  Verantwortlichkeit §276 |\n  Sorgfalt §277 |\n  Verantw. für Dritte/Verrichtungsgeh.-Haft. §278 \
-+ §831}", shape=record, pos="326,545", rects="121.5,587,530.5,629 121.5,545,530.5,587 121.5,503,530.5,545 121.5,461,530.5,503", width="5.6667", height="2.3472"];
++ §831}", shape=record, pos="336,545", rects="131.5,587,540.5,629 131.5,545,540.5,587 131.5,503,540.5,545 131.5,461,540.5,503", width="5.6667", height="2.3472"];
 	Schadensersatz [label="{\n  Schadensersatz: |\n  wegen Pflichtverletzung §280 Abs.1 |\n  statt der Leistung §281 |\n  Schutzpflichtverletzung §282 |\
-\n  bei Ausschluss der Leistungspflicht §283 |\n  Ersatz vergeblicher Aufwendungen §284 |\n  bei Verzug §286 + §287 + §288}", shape=record, pos="500,148", rects="348.5,253,651.5,295 348.5,211,651.5,253 348.5,169,651.5,211 348.5,127,651.5,169 348.5,85,651.5,127 348.5,43,651.5,85 348.5,1,651.5\
+\n  bei Ausschluss der Leistungspflicht §283 |\n  Ersatz vergeblicher Aufwendungen §284 |\n  bei Verzug §286 + §287 + §288}", shape=record, pos="510,148", rects="358.5,253,661.5,295 358.5,211,661.5,253 358.5,169,661.5,211 358.5,127,661.5,169 358.5,85,661.5,127 358.5,43,661.5,85 358.5,1,661.5\
 ,43", width="4.1944", height="4.0972"];
 	Gläubiger [label="{\n  Gläubiger: |\n  Annahmeverzug §293 |\n  Wirkungen des Gläubigerverzugs §300}", shape=record, pos="647,1318", rects="502,1339,792,1381 502,1297,792,1339 502,1255,792,1297", width="4.0278", height="1.7639"];
-	Rücktritt [label="{\n  Rücktritt: |\n  keine/falsche Leistung  §323 |\n  Pflichtverletzung §324 |\n  Wirkungen §346 |\n  Erklärung §349}", shape=record, pos="540,880", rects="434,943,646,985 434,901,646,943 434,859,646,901 434,817,646,859 434,775,646,817", width="2.9444", height="2.9306"];
-	Verbraucher [label="{\n  Verbraucher: |\n  Widerruf  §355 |\n  Rückgabe §356 |\n  Rechtsfolgen Widerr./Rückg. §357}", shape=record, pos="680,1089", rects="553.5,1131,806.5,1173 553.5,1089,806.5,1131 553.5,1047,806.5,1089 553.5,1005,806.5,1047", width="3.5", height="2.3472"];
-	"spez\. Schuldverhältnis" [label="spez. Schuldverhältnis", pos="1359,1484", width="2.3889", height="0.5"];
-	Kaufvertrag [label="{\n  Kaufvertrag: |\n  Pflichten §433 |\n  Sache §90 |\n  Verbrauchsgüter §474}", shape=record, pos="1036,1318", rects="948.5,1360,1123.5,1402 948.5,1318,1123.5,1360 948.5,1276,1123.5,1318 948.5,1234,1123.5,1276", width="2.4167", height="2.3472"];
-	Käufer [label=Käufer, pos="855,1089", width="0.86111", height="0.5"];
+	Rücktritt [label="{\n  Rücktritt: |\n  keine/falsche Leistung  §323 |\n  Pflichtverletzung §324 |\n  Wirkungen §346 |\n  Erklärung §349}", shape=record, pos="573,880", rects="467,943,679,985 467,901,679,943 467,859,679,901 467,817,679,859 467,775,679,817", width="2.9444", height="2.9306"];
+	Verbraucher [label="{\n  Verbraucher: |\n  Widerruf  §355 |\n  Rückgabe §356 |\n  Rechtsfolgen Widerr./Rückg. §357}", shape=record, pos="674,1089", rects="547.5,1131,800.5,1173 547.5,1089,800.5,1131 547.5,1047,800.5,1089 547.5,1005,800.5,1047", width="3.5", height="2.3472"];
+	"spez\. Schuldverhältnis" [label="spez. Schuldverhältnis", pos="1404,1484", width="2.3889", height="0.5"];
+	Kaufvertrag [label="{\n  Kaufvertrag: |\n  Pflichten §433 |\n  Sache §90 |\n  Verbrauchsgüter §474}", shape=record, pos="1030,1318", rects="942.5,1360,1117.5,1402 942.5,1318,1117.5,1360 942.5,1276,1117.5,1318 942.5,1234,1117.5,1276", width="2.4167", height="2.3472"];
+	Käufer [label=Käufer, pos="849,1089", width="0.86111", height="0.5"];
 	Mängel [label="{\n  Mängel: |\n  Sachmangel §434 |\n  Rechtsmangel §435 |\n  Rechte des Käufers bei Mängeln §437 |\n  Verjährung §438 |\
 \n  Nacherfüllung §439 |\n  keine Frist §440 |\n  Minderung §441 |\n  Kenntniss d. Käufers §442 |\n  Beweislastumkehr §476\
-}", shape=record, pos="772,545", rects="632.5,713,911.5,755 632.5,671,911.5,713 632.5,629,911.5,671 632.5,587,911.5,629 632.5,545,911.5,587 632.5,503,911.5,545 632.5,461\
-,911.5,503 632.5,419,911.5,461 632.5,377,911.5,419 632.5,335,911.5,377", width="3.8611", height="5.8472"];
-	Gefahrenübergang [label="{\n  Gefahrenübergang: |\n  allg. §446 |\n  Versendungskauf §447}", shape=record, pos="993,1089", rects="903.5,1110,1082.5,1152 903.5,1068,1082.5,1110 903.5,1026,1082.5,1068", width="2.4722", height="1.7639"];
-	Verkäufer [label=Verkäufer, pos="1142,1089", width="1.1667", height="0.5"];
-	"Regress §478" [label="Regress §478", pos="983,545", width="1.5", height="0.5"];
-	Werkvertrag [label="{\n  Werkvertrag: |\n  Individualsoftware §651}", shape=record, pos="1359,1318", rects="1265,1318,1453,1360 1265,1276,1453,1318", width="2.6111", height="1.1806"];
-	Besteller [label=Besteller, pos="1248,1089", width="1.0556", height="0.5"];
-	Unternehmer [label=Unternehmer, pos="1359,1089", width="1.5278", height="0.5"];
-	"Gefahrenübergang §644" [label="Gefahrenübergang §644", pos="1524,1089", width="2.5556", height="0.5"];
+}", shape=record, pos="808,545", rects="668.5,713,947.5,755 668.5,671,947.5,713 668.5,629,947.5,671 668.5,587,947.5,629 668.5,545,947.5,587 668.5,503,947.5,545 668.5,461\
+,947.5,503 668.5,419,947.5,461 668.5,377,947.5,419 668.5,335,947.5,377", width="3.8611", height="5.8472"];
+	Gefahrenübergang [label="{\n  Gefahrenübergang: |\n  allg. §446 |\n  Versendungskauf §447}", shape=record, pos="987,1089", rects="897.5,1110,1076.5,1152 897.5,1068,1076.5,1110 897.5,1026,1076.5,1068", width="2.4722", height="1.7639"];
+	Verkäufer [label=Verkäufer, pos="1136,1089", width="1.1667", height="0.5"];
+	"Regress §478" [label="Regress §478", pos="1019,545", width="1.5", height="0.5"];
+	Werkvertrag [label="{\n  Werkvertrag: |\n  Individualsoftware §651}", shape=record, pos="1404,1318", rects="1310,1318,1498,1360 1310,1276,1498,1318", width="2.6111", height="1.1806"];
+	Besteller [label=Besteller, pos="1293,1089", width="1.0556", height="0.5"];
+	Unternehmer [label=Unternehmer, pos="1404,1089", width="1.5278", height="0.5"];
+	"Gefahrenübergang §644" [label="Gefahrenübergang §644", pos="1569,1089", width="2.5556", height="0.5"];
 	Mängel_dv [label="{\n  Mängel: |\n  Rechte des Bestellers §634 |\n  Verjährung §634a |\n  Nacherfüllung §635 |\n  Selbstvornahme §637 |\n  \
-Minderung §638}", shape=record, pos="1158,545", rects="1054.5,629,1261.5,671 1054.5,587,1261.5,629 1054.5,545,1261.5,587 1054.5,503,1261.5,545 1054.5,461,1261.5,503 1054.5,419,1261.5,\
+Minderung §638}", shape=record, pos="1194,545", rects="1090.5,629,1297.5,671 1090.5,587,1297.5,629 1090.5,545,1297.5,587 1090.5,503,1297.5,545 1090.5,461,1297.5,503 1090.5,419,1297.5,\
 461", width="2.8611", height="3.5139"];
-	"Abnahme §640" [label="Abnahme §640", pos="1339,545", width="1.6667", height="0.5"];
-	"Vergütung §641 + §271 + §320" [label="Vergütung §641 + §271 + §320", pos="1536,545", width="3.3056", height="0.5"];
-	Dienstvertrag [label=Dienstvertrag, pos="1599,1318", width="1.5556", height="0.5"];
-	Kündigung_dv [label="{\n  Kündigung: |\n  Schriftform §632}", shape=record, pos="1702,1089", rects="1633.5,1089,1770.5,1131 1633.5,1047,1770.5,1089", width="1.8889", height="1.1806"];
-	Mietvertrag [label="{\n  Mietvertrag: |\n  Hauptpflichten §535}", shape=record, pos="1822,1318", rects="1741,1318,1903,1360 1741,1276,1903,1318", width="2.25", height="1.1806"];
-	Mieter [label=Mieter, pos="1822,1089", width="0.83333", height="0.5"];
-	Mängel2 [label="{\n  Mängel: |\n  Mietminderung §536 |\n  Schadens-/Aufwendungsanspruch §536a |\n  Kenntnis von Mängeln §536b}", shape=record, pos="1823,545", rects="1672.5,587,1973.5,629 1672.5,545,1973.5,587 1672.5,503,1973.5,545 1672.5,461,1973.5,503", width="4.1667", height="2.3472"];
-	Kündigung [label="{\n  Kündigung: §314 |\n  aussderordentlich §543}", shape=record, pos="1961,1089", rects="1870,1089,2052,1131 1870,1047,2052,1089", width="2.5278", height="1.1806"];
-	"abändernde Annahme §150 Abs\.2" [label="abändernde Annahme §150 Abs.2", pos="1688,1900", width="3.4722", height="0.5"];
-	"Erlöschen §146" [label="Erlöschen §146", pos="1892,1900", width="1.6944", height="0.5"];
-	"neuer Antrag §150 Abs\.1" [label="neuer Antrag §150 Abs.1", pos="1958,1608", width="2.6389", height="0.5"];
-	Pflichtverletzung [label=Pflichtverletzung, pos="329,1089", width="1.8611", height="0.5"];
-	Schuldrecht -> Vorraussetzungen [style=bold, pos="e,1156,2947.3 1156,2985.8 1156,2977.7 1156,2967.7 1156,2957.5"];
-	Vorraussetzungen -> Willenserklärung [style=bold, pos="e,1156,2823.4 1156,2862.8 1156,2853.8 1156,2844 1156,2833.5"];
-	Willenserklärung -> "Vertreter §164" [pos="e,758.04,2450.3 1057.9,2629.7 990.31,2594.6 899.07,2545.2 822,2496 802.88,2483.8 782.42,2468.9 766.14,2456.5"];
-	"Vertreter §164" -> "Vertreter ohne Vertretungvollmacht §177" [pos="e,702.7,2330 729.23,2413.8 723,2394.1 713,2362.5 705.79,2339.8"];
-	Willenserklärung -> Anfechtung [pos="e,987.71,2495.1 1057.9,2571.7 1036.4,2548.3 1014.3,2524.1 994.58,2502.6"];
-	Anfechtung -> "Schadensersatz §122" [pos="e,946.14,2330.1 940,2368.8 941.6,2358.7 943.19,2348.7 944.57,2340"];
-	"Vertragsanbahnung §311 Abs\.2" -> "Pflichten §241 Abs\.2" [pos="e,1163.1,2210 1330.8,2293.9 1288.4,2272.7 1218.2,2237.6 1172.2,2214.6"];
-	"Pflichten §241 Abs\.2" -> "Schadensersatz §280 Abs\.1 Satz 1" [pos="e,792.17,1918.2 1073.5,2174 1029.1,2157.2 965.89,2128.8 920,2090 863.8,2042.5 818.59,1967.2 796.92,1927.1"];
-	Willenserklärung -> "Letter of Intent §133 + §157" [style=dashed, pos="e,1152.3,2450.3 1149.3,2535 1149.6,2506.5 1150.3,2479.6 1151.5,2460.4"];
-	"Letter of Intent §133 + §157" -> Willenserklärung [style=dashed, pos="e,1162.7,2535 1159.7,2450.3 1161.2,2467.4 1162.2,2494.8 1162.6,2524.7"];
-	Willenserklärung -> "Wirksamwerden §130" [style=bold, pos="e,1351.6,2450.1 1254.1,2564.2 1288.1,2524.4 1323.1,2483.4 1344.9,2457.8"];
-	"Wirksamwerden §130" -> "Vertragsanbahnung §311 Abs\.2" [style=bold, pos="e,1367,2330 1367,2413.8 1367,2394.2 1367,2362.8 1367,2340.1"];
-	"Vertragsanbahnung §311 Abs\.2" -> Antrag [style=bold, pos="e,1440.2,2253.4 1389.8,2293.8 1401.4,2284.5 1416.4,2272.5 1432,2260"];
-	Antrag -> Vertragsannahme [style=bold, pos="e,1157.9,2026.1 1440.2,2177.3 1378.2,2162.8 1290.8,2135.8 1226,2090 1203.8,2074.3 1183.1,2054.6 1164.6,2033.8"];
-	Antrag -> "abändernde Annahme §150 Abs\.2" [pos="e,1673.9,1918.1 1548.2,2129 1583.3,2066 1638.8,1972 1668.4,1926.6"];
-	"abändernde Annahme §150 Abs\.2" -> Antrag [pos="e,1559.6,2129 1680.9,1918.1 1661,1957.6 1605.9,2053.1 1565,2120.1"];
-	Antrag -> "Erlöschen §146" [pos="e,1890.4,1918.2 1593.6,2184.9 1661.8,2174.8 1760.1,2150.1 1822,2090 1867.5,2045.8 1883.6,1969.6 1889.2,1928.4"];
-	"Erlöschen §146" -> "neuer Antrag §150 Abs\.1" [pos="e,1953.9,1626.3 1896.1,1881.7 1907.3,1832.3 1938.2,1695.4 1951.7,1636.1"];
-	"neuer Antrag §150 Abs\.1" -> Antrag [pos="e,1593.9,2185.7 1965.4,1626.3 1992.1,1695.8 2076.2,1946.7 1962,2090 1918.1,2145.1 1720.5,2172.9 1603.9,2184.7"];
-	Vertragsannahme -> Dissens [pos="e,1063.6,1671.1 1067.8,1773.6 1066.5,1742 1065.2,1709.2 1064,1681.2"];
-	Antrag -> AGB [pos="e,1465.8,2089.1 1483.9,2129 1479.5,2119.4 1474.7,2109 1469.9,2098.2"];
-	AGB -> Antrag [pos="e,1495.3,2129 1478.7,2089.1 1483.2,2099.7 1487.4,2109.9 1491.4,2119.5"];
-	Vertragsannahme -> Vertrag [style=bold, pos="e,1175.1,1626.5 1120.2,1773.6 1139.3,1722.4 1159.6,1668 1171.5,1636"];
-	Vertrag -> "allg\. Schuldverhältnis" [style=bold, pos="e,578.31,1488.6 1175,1589.7 1168.2,1574.7 1156.4,1554.3 1139,1544 1092.9,1516.7 767.79,1497.7 588.33,1489.1"];
-	Vertrag -> "spez\. Schuldverhältnis" [style=bold, pos="e,1333.2,1502.1 1207.7,1590 1238.7,1568.3 1290.7,1531.9 1324.9,1507.9"];
+	Abnahme_wv [label="{\n  Abnahme §640 |\n  Kündigungsrecht §649}", shape=record, pos="1403,545", rects="1315,545,1491,587 1315,503,1491,545", width="2.4444", height="1.1806"];
+	"Vergütung §641 + §271 + §320" [label="Vergütung §641 + §271 + §320", pos="1628,545", width="3.3056", height="0.5"];
+	Dienstvertrag [label=Dienstvertrag, pos="1674,1318", width="1.5556", height="0.5"];
+	Kündigung_dv [label="{\n  Kündigung: |\n  Schriftform §632}", shape=record, pos="1747,1089", rects="1678.5,1089,1815.5,1131 1678.5,1047,1815.5,1089", width="1.8889", height="1.1806"];
+	Mietvertrag [label="{\n  Mietvertrag: |\n  Hauptpflichten §535}", shape=record, pos="1897,1318", rects="1816,1318,1978,1360 1816,1276,1978,1318", width="2.25", height="1.1806"];
+	Mieter [label=Mieter, pos="1897,1089", width="0.83333", height="0.5"];
+	Mängel2 [label="{\n  Mängel: |\n  Mietminderung §536 |\n  Schadens-/Aufwendungsanspruch §536a |\n  Kenntnis von Mängeln §536b}", shape=record, pos="1915,545", rects="1764.5,587,2065.5,629 1764.5,545,2065.5,587 1764.5,503,2065.5,545 1764.5,461,2065.5,503", width="4.1667", height="2.3472"];
+	Kündigung [label="{\n  Kündigung: §314 |\n  aussderordentlich §543}", shape=record, pos="2036,1089", rects="1945,1089,2127,1131 1945,1047,2127,1089", width="2.5278", height="1.1806"];
+	"abändernde Annahme §150 Abs\.2" [label="abändernde Annahme §150 Abs.2", pos="1700,1900", width="3.4722", height="0.5"];
+	"Erlöschen §146" [label="Erlöschen §146", pos="1904,1900", width="1.6944", height="0.5"];
+	"neuer Antrag §150 Abs\.1" [label="neuer Antrag §150 Abs.1", pos="1970,1608", width="2.6389", height="0.5"];
+	Pflichtverletzung [label=Pflichtverletzung, pos="345,1089", width="1.8611", height="0.5"];
+	Schuldrecht -> Vorraussetzungen [style=bold, pos="e,1168,2947.3 1168,2985.8 1168,2977.7 1168,2967.7 1168,2957.5"];
+	Vorraussetzungen -> Willenserklärung [style=bold, pos="e,1168,2823.4 1168,2862.8 1168,2853.8 1168,2844 1168,2833.5"];
+	Willenserklärung -> "Vertreter §164" [pos="e,770.04,2450.3 1069.9,2629.7 1002.3,2594.6 911.07,2545.2 834,2496 814.88,2483.8 794.42,2468.9 778.14,2456.5"];
+	"Vertreter §164" -> "Vertreter ohne Vertretungvollmacht §177" [pos="e,714.7,2330 741.23,2413.8 735,2394.1 725,2362.5 717.79,2339.8"];
+	Willenserklärung -> Anfechtung [pos="e,999.71,2495.1 1069.9,2571.7 1048.4,2548.3 1026.3,2524.1 1006.6,2502.6"];
+	Anfechtung -> "Schadensersatz §122" [pos="e,958.14,2330.1 952,2368.8 953.6,2358.7 955.19,2348.7 956.57,2340"];
+	"Vertragsanbahnung §311 Abs\.2" -> "Pflichten §241 Abs\.2" [pos="e,1175.1,2210 1342.8,2293.9 1300.4,2272.7 1230.2,2237.6 1184.2,2214.6"];
+	"Pflichten §241 Abs\.2" -> "Schadensersatz §280 Abs\.1 Satz 1" [pos="e,804.17,1918.2 1085.5,2174 1041.1,2157.2 977.89,2128.8 932,2090 875.8,2042.5 830.59,1967.2 808.92,1927.1"];
+	Willenserklärung -> "Letter of Intent §133 + §157" [style=dashed, pos="e,1164.3,2450.3 1161.3,2535 1161.6,2506.5 1162.3,2479.6 1163.5,2460.4"];
+	"Letter of Intent §133 + §157" -> Willenserklärung [style=dashed, pos="e,1174.7,2535 1171.7,2450.3 1173.2,2467.4 1174.2,2494.8 1174.6,2524.7"];
+	Willenserklärung -> "Wirksamwerden §130" [style=bold, pos="e,1363.6,2450.1 1266.1,2564.2 1300.1,2524.4 1335.1,2483.4 1356.9,2457.8"];
+	"Wirksamwerden §130" -> "Vertragsanbahnung §311 Abs\.2" [style=bold, pos="e,1379,2330 1379,2413.8 1379,2394.2 1379,2362.8 1379,2340.1"];
+	"Vertragsanbahnung §311 Abs\.2" -> Antrag [style=bold, pos="e,1452.2,2253.4 1401.8,2293.8 1413.4,2284.5 1428.4,2272.5 1444,2260"];
+	Antrag -> Vertragsannahme [style=bold, pos="e,1169.9,2026.1 1452.2,2177.3 1390.2,2162.8 1302.8,2135.8 1238,2090 1215.8,2074.3 1195.1,2054.6 1176.6,2033.8"];
+	Antrag -> "abändernde Annahme §150 Abs\.2" [pos="e,1685.9,1918.1 1560.2,2129 1595.3,2066 1650.8,1972 1680.4,1926.6"];
+	"abändernde Annahme §150 Abs\.2" -> Antrag [pos="e,1571.6,2129 1692.9,1918.1 1673,1957.6 1617.9,2053.1 1577,2120.1"];
+	Antrag -> "Erlöschen §146" [pos="e,1902.4,1918.2 1605.6,2184.9 1673.8,2174.8 1772.1,2150.1 1834,2090 1879.5,2045.8 1895.6,1969.6 1901.2,1928.4"];
+	"Erlöschen §146" -> "neuer Antrag §150 Abs\.1" [pos="e,1965.9,1626.3 1908.1,1881.7 1919.3,1832.3 1950.2,1695.4 1963.7,1636.1"];
+	"neuer Antrag §150 Abs\.1" -> Antrag [pos="e,1605.9,2185.7 1977.4,1626.3 2004.1,1695.8 2088.2,1946.7 1974,2090 1930.1,2145.1 1732.5,2172.9 1615.9,2184.7"];
+	Vertragsannahme -> Dissens [pos="e,1075.6,1671.1 1079.8,1773.6 1078.5,1742 1077.2,1709.2 1076,1681.2"];
+	Antrag -> AGB [pos="e,1477.8,2089.1 1495.9,2129 1491.5,2119.4 1486.7,2109 1481.9,2098.2"];
+	AGB -> Antrag [pos="e,1507.3,2129 1490.7,2089.1 1495.2,2099.7 1499.4,2109.9 1503.4,2119.5"];
+	Vertragsannahme -> Vertrag [style=bold, pos="e,1187.1,1626.5 1132.2,1773.6 1151.3,1722.4 1171.6,1668 1183.5,1636"];
+	Vertrag -> "allg\. Schuldverhältnis" [style=bold, pos="e,578.1,1488.4 1187,1589.7 1180.2,1574.7 1168.4,1554.3 1151,1544 1103.8,1516.1 770.46,1497.3 588.27,1488.9"];
+	Vertrag -> "spez\. Schuldverhältnis" [style=bold, pos="e,1373.4,1502.1 1224.5,1590 1261.6,1568.1 1324,1531.2 1364.6,1507.3"];
 	"allg\. Schuldverhältnis" -> Gläubiger [style=bold, pos="e,579.81,1381 492.42,1463 512.66,1444 543.61,1415 572.51,1387.9"];
 	"allg\. Schuldverhältnis" -> Erfüllung [style=bold, pos="e,218.29,1419.1 361.84,1469 320.85,1460.6 274.47,1447.7 227.4,1423.8"];
-	Gläubiger -> Rücktritt [pos="e,526.94,985.22 589.89,1254.8 572.01,1231.2 554.49,1203 545,1174 526.37,1117.1 523.75,1050.7 526.39,995.41"];
-	Gläubiger -> Verbraucher [pos="e,667.84,1173.4 656.1,1254.8 659.28,1232.8 662.91,1207.6 666.37,1183.6"];
-	Rücktritt -> Schadensersatz [label=§325, pos="e,533.72,295.03 546.16,774.99 551.14,664.81 554.98,486.73 539,334 538.01,324.56 536.75,314.9 535.3,305.18", lp="568.5,545"];
+	Gläubiger -> Rücktritt [pos="e,539.21,985.33 585.72,1254.7 566.97,1231.3 548.73,1203.2 539,1174 519.95,1116.9 525.48,1050.4 537.06,995.16"];
+	Gläubiger -> Verbraucher [pos="e,664.05,1173.4 654.45,1254.8 657.04,1232.8 660.02,1207.6 662.84,1183.6"];
+	Rücktritt -> Schadensersatz [label=§325, pos="e,543.14,295.1 573.44,774.9 572.72,664.64 568.21,486.51 549,334 547.81,324.59 546.4,314.94 544.83,305.23", lp="591.5,545"];
 	"allg\. Schuldverhältnis" -> Schuldner [style=bold, pos="e,429.79,1423.3 456.07,1463 450.35,1454.3 443.25,1443.6 435.52,1432"];
-	Schuldner -> Pflichtverletzung [pos="e,331.46,1107.2 345.77,1212.9 341.02,1177.8 336.11,1141.6 332.84,1117.4"];
-	Pflichtverletzung -> Verantwortlichkeit [pos="e,326.46,629.24 328.9,1070.9 328.53,1004.6 327.25,771.97 326.52,639.39"];
-	Verantwortlichkeit -> Schadensersatz [pos="e,435.56,295.03 362.9,460.81 382.85,415.3 408.12,357.63 431.52,304.25"];
-	"spez\. Schuldverhältnis" -> Kaufvertrag [style=bold, pos="e,1123.6,1363 1323.8,1465.9 1278.3,1442.5 1197.2,1400.8 1132.6,1367.7"];
-	Kaufvertrag -> Käufer [pos="e,861.5,1107.2 948.15,1237.7 929.26,1218 910.38,1196.1 895,1174 882.63,1156.2 872.32,1134 865.27,1116.7"];
-	Kaufvertrag -> Verkäufer [pos="e,1133.6,1107.1 1075,1233.7 1094.1,1192.4 1115.9,1145.5 1129.3,1116.5"];
-	Käufer -> Mängel [pos="e,804.06,755.12 852.24,1070.9 844.89,1022.8 824.16,886.9 805.62,765.33"];
-	Kaufvertrag -> Gefahrenübergang [pos="e,1004.9,1152.3 1020.2,1233.7 1015.8,1210.3 1011,1185 1006.8,1162.3"];
-	Verkäufer -> "Regress §478" [pos="e,988.31,563.17 1136.7,1070.9 1113.4,991.03 1019.5,669.82 991.14,572.85"];
-	"spez\. Schuldverhältnis" -> Werkvertrag [style=bold, pos="e,1359,1360.1 1359,1465.9 1359,1443.2 1359,1403.1 1359,1370.4"];
-	Werkvertrag -> Besteller [pos="e,1256.8,1107.2 1338.6,1276 1316.1,1229.6 1280.5,1156.1 1261.3,1116.5"];
-	Werkvertrag -> Unternehmer [pos="e,1359,1107.2 1359,1276 1359,1229.9 1359,1157.1 1359,1117.3"];
-	Werkvertrag -> "Gefahrenübergang §644" [pos="e,1510.9,1107.2 1389.3,1276 1423,1229.2 1476.5,1154.9 1504.9,1115.5"];
-	Besteller -> Mängel_dv [pos="e,1178.9,671.29 1245,1070.9 1235.1,1011.1 1202.9,816.27 1180.6,681.31"];
-	Besteller -> "Abnahme §640" [pos="e,1336,563.17 1251,1070.9 1264.4,991.11 1318,670.47 1334.3,573.15"];
-	Unternehmer -> "Vergütung §641 + §271 + §320" [pos="e,1530.1,563.17 1364.9,1070.9 1390.9,991.03 1495.4,669.82 1526.9,572.85"];
-	"spez\. Schuldverhältnis" -> Dienstvertrag [style=bold, pos="e,1577.4,1336.2 1392.6,1465.9 1413.1,1454.5 1439.5,1439.2 1462,1424 1500.4,1398.1 1542.2,1365 1569.4,1342.7"];
-	Dienstvertrag -> Kündigung_dv [pos="e,1683,1131.2 1607.3,1299.6 1622.6,1265.5 1656.1,1191 1678.9,1140.4"];
-	"spez\. Schuldverhältnis" -> Mietvertrag [style=bold, pos="e,1770.5,1360.2 1445.1,1476.3 1507.7,1468.5 1593.4,1453.2 1664,1424 1698.9,1409.6 1734.1,1386.9 1762.4,1366.2"];
-	Mietvertrag -> Mieter [pos="e,1822,1107.2 1822,1276 1822,1229.9 1822,1157.1 1822,1117.3"];
-	Mietvertrag -> Kündigung [pos="e,1935.4,1131.1 1847.5,1276 1870.8,1237.6 1905.3,1180.8 1930.1,1139.9"];
-	Mieter -> Mängel2 [pos="e,1822.8,629.24 1822,1070.9 1822.2,1004.6 1822.6,771.97 1822.8,639.39"];
+	Schuldner -> Pflichtverletzung [pos="e,346.19,1107.2 353.11,1212.9 350.82,1177.8 348.44,1141.6 346.86,1117.4"];
+	Pflichtverletzung -> Verantwortlichkeit [pos="e,337.39,629.24 344.7,1070.9 343.6,1004.6 339.76,771.97 337.56,639.39"];
+	Verantwortlichkeit -> Schadensersatz [pos="e,445.56,295.03 372.9,460.81 392.85,415.3 418.12,357.63 441.52,304.25"];
+	"spez\. Schuldverhältnis" -> Kaufvertrag [style=bold, pos="e,1117.7,1356.9 1363.3,1465.9 1307,1440.9 1203.6,1395.1 1126.9,1361"];
+	Kaufvertrag -> Käufer [pos="e,855.5,1107.2 942.15,1237.7 923.26,1218 904.38,1196.1 889,1174 876.63,1156.2 866.32,1134 859.27,1116.7"];
+	Kaufvertrag -> Verkäufer [pos="e,1127.6,1107.1 1069,1233.7 1088.1,1192.4 1109.9,1145.5 1123.3,1116.5"];
+	Käufer -> Mängel [pos="e,823.84,755.12 847.64,1070.9 844.01,1022.8 833.77,886.9 824.61,765.33"];
+	Kaufvertrag -> Gefahrenübergang [pos="e,998.89,1152.3 1014.2,1233.7 1009.8,1210.3 1005,1185 1000.8,1162.3"];
+	Verkäufer -> "Regress §478" [pos="e,1022.9,563.17 1132.1,1070.9 1114.9,991.11 1046,670.47 1025.1,573.15"];
+	"spez\. Schuldverhältnis" -> Werkvertrag [style=bold, pos="e,1404,1360.1 1404,1465.9 1404,1443.2 1404,1403.1 1404,1370.4"];
+	Werkvertrag -> Besteller [pos="e,1301.8,1107.2 1383.6,1276 1361.1,1229.6 1325.5,1156.1 1306.3,1116.5"];
+	Werkvertrag -> Unternehmer [pos="e,1404,1107.2 1404,1276 1404,1229.9 1404,1157.1 1404,1117.3"];
+	Werkvertrag -> "Gefahrenübergang §644" [pos="e,1555.9,1107.2 1434.3,1276 1468,1229.2 1521.5,1154.9 1549.9,1115.5"];
+	Besteller -> Mängel_dv [pos="e,1217,671.29 1289.7,1070.9 1278.8,1011.1 1243.4,816.27 1218.8,681.31"];
+	Besteller -> Abnahme_wv [pos="e,1394.5,587.04 1296.7,1070.9 1311.7,996.74 1368.7,714.47 1392.5,596.89"];
+	Unternehmer -> "Vergütung §641 + §271 + §320" [pos="e,1620.5,563.17 1411.5,1070.9 1444.4,990.95 1576.9,669.17 1616.7,572.56"];
+	"spez\. Schuldverhältnis" -> Dienstvertrag [style=bold, pos="e,1646.1,1336.1 1435.7,1465.9 1456.2,1454.2 1483.3,1438.4 1507,1424 1552.4,1396.4 1603.9,1363.5 1637.6,1341.7"];
+	Dienstvertrag -> Kündigung_dv [pos="e,1733.5,1131.2 1679.9,1299.6 1690.7,1265.6 1714.3,1191.6 1730.4,1141"];
+	"spez\. Schuldverhältnis" -> Mietvertrag [style=bold, pos="e,1846,1360.2 1490.3,1478.4 1559.6,1471.5 1658.3,1456.6 1739,1424 1774.1,1409.8 1809.5,1387.1 1837.8,1366.3"];
+	Mietvertrag -> Mieter [pos="e,1897,1107.2 1897,1276 1897,1229.9 1897,1157.1 1897,1117.3"];
+	Mietvertrag -> Kündigung [pos="e,2010.4,1131.1 1922.5,1276 1945.8,1237.6 1980.3,1180.8 2005.1,1139.9"];
+	Mieter -> Mängel2 [pos="e,1912.2,629.24 1897.6,1070.9 1899.8,1004.6 1907.5,771.97 1911.9,639.39"];
 }
