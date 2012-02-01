@@ -79,7 +79,8 @@ schuldner = g.add_nodes("Schuldner", "shape" => "record", "label" => "{
   Hauptleistungspflicht §241 Abs.1 |
   Schutzpflicht §241 Abs.2 |
   Leistungsort §269 |
-  Zahlungsort §270}")
+  Zahlungsort §270 |
+  Leistungszeit §271}")
 schuldner_pflichtverl = ("Pflichtverletzung")
 schuldner_verantw = g.add_nodes("Verantwortlichkeit", "shape" => "record", "label" => "{
   Vertretenmüssen: |
